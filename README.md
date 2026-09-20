@@ -145,6 +145,12 @@ uv run dagster dev -f orchestration/dagster_pipeline.py
 - **Scale:** this is single-partition-friendly demo scale, not a tuned multi-broker cluster.
 - Redpanda is used as the broker because it speaks the Kafka API and starts as a single container; the client code is standard Kafka.
 
+## Learn
+
+`docs/STUDY_NOTES.md` is a guided walkthrough of how the pipeline works, followed by a lab where you
+deliberately break it (kill the consumer mid-batch, send a poison message, replay a consumer group)
+and watch the safety mechanisms behave.
+
 ## Next steps
 
 - Schema registry plus data contracts (reject schema drift to the DLQ)
